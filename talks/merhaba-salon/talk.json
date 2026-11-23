@@ -1,0 +1,10 @@
+{
+  "title": "Merhaba salon",
+  "lang": "tr",
+  "theme": "house",
+  "duration": 5,
+  "thanks": "Oynadığın için teşekkürler! Şimdi sıra seninkinde.",
+  "links": [
+    { "label": "GitHub'da Show of Phones", "url": "https://github.com/radioheavy/show-of-phones" }
+  ]
+}

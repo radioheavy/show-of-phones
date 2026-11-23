@@ -1,0 +1,10 @@
+{
+  "title": "Hello, room",
+  "lang": "en",
+  "theme": "house",
+  "duration": 5,
+  "thanks": "Thanks for playing! Now make your own.",
+  "links": [
+    { "label": "Show of Phones on GitHub", "url": "https://github.com/radioheavy/show-of-phones" }
+  ]
+}

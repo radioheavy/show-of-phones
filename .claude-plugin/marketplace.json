@@ -1,0 +1,12 @@
+{
+  "name": "show-of-phones",
+  "owner": { "name": "radioheavy" },
+  "metadata": { "description": "Show of Phones: interactive talks the audience plays from their phones." },
+  "plugins": [
+    {
+      "name": "show-of-phones",
+      "source": "./plugin",
+      "description": "Claude interviews you like a talk coach, writes your deck with live audience moments, deploys it to your Cloudflare account and prepares you for the venue."
+    }
+  ]
+}

@@ -1,0 +1,7 @@
+node_modules/
+dist/
+.sop/
+.dev.vars
+.wrangler/
+sop.config.local.json
+.DS_Store

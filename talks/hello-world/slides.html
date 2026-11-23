@@ -1,0 +1,81 @@
+<section class="slide" data-id="lobby" data-title="Lobby">
+  <p class="kicker">A Show of Phones demo</p>
+  <h1>Hello, room.</h1>
+  <div class="sop-join" data-lead="Phones out. Tonight you play along."></div>
+  <aside class="notes">
+0 · Leave this up while the room fills: every phone that joins lights a seat. "Before we start: phones out. Yes, really. Scan the code."
+  </aside>
+</section>
+
+<section class="slide" data-id="intro" data-title="This is a deck" data-transition="curtain">
+  <h2>Every talk starts with “please put your phones away.”</h2>
+  <p class="lede" data-step="1">This one doesn’t. Tonight your phone is how you talk back.</p>
+  <aside class="notes">
+0 · Every talk starts with "please put your phones away."
+1 · This one doesn't. Tonight your phone is how you talk back.
+  </aside>
+</section>
+
+<section class="slide" data-id="room" data-title="This room" data-transition="pixel">
+  <div class="split">
+    <div>
+      <p class="huge" data-count>—</p>
+      <p class="lede">phones in this room, right now.</p>
+    </div>
+    <ul class="list">
+      <li data-step="1">You vote, and the bars fill up live.</li>
+      <li data-step="2">You swipe, and the card leans your way.</li>
+      <li data-step="3">You tap, and something on stage moves.</li>
+    </ul>
+  </div>
+  <aside class="notes">
+0 · That big number is you: every phone that scanned the code. (talk.js counts it up live.)
+1 · You vote, and the bars fill up live.
+2 · You swipe, and the card leans your way.
+3 · You tap, and something on stage moves. Let's try all three.
+  </aside>
+</section>
+
+<section class="slide" data-id="poll" data-title="Live poll">
+  <h2>Where are you right now?</h2>
+  <div class="sop-poll" data-step="1" data-close="2" data-q="Where are you right now?" data-options="Front row|Back row|At home|On stage"></div>
+  <p class="lede verdict" data-step="3" data-verdict></p>
+  <aside class="notes">
+0 · Ask the question out loud.
+1 · Voting is open on the phones. Give it 15 seconds.
+2 · Voting closes, the winner lights up. Read it out.
+3 · A line written from the result itself (talk.js reads the room's answer). React to it.
+  </aside>
+</section>
+
+<section class="slide" data-id="swipe" data-title="Swipe card" data-transition="flash">
+  <p class="kicker">Swipe it on your phone</p>
+  <div class="sop-swipe" data-step="1" data-close="2" data-q="Slides are for…" data-options="Reading|Playing"></div>
+  <aside class="notes">
+0 · One card, two choices.
+1 · [LIVE] Swipe on your phones. The card leans with the room.
+2 · The card flies to the winning side.
+  </aside>
+</section>
+
+<section class="slide" data-id="tap" data-title="Tap race" data-transition="dark">
+  <h2 data-step="0">Charge the battery!</h2>
+  <div class="battery" aria-hidden="true"><i></i><b>0%</b></div>
+  <div class="sop-tap" data-step="1" data-close="2" data-label="Tap as fast as you can!"></div>
+  <aside class="notes">
+0 · This battery is empty. Only you can charge it.
+1 · [LIVE] Tap your phones! 20 seconds.
+2 · Done: confetti. (talk.js turns taps into battery charge: an example of custom effects.)
+  </aside>
+</section>
+
+<section class="slide" data-id="end" data-title="The room said" data-transition="curtain">
+  <p class="kicker">Curtain call</p>
+  <h2>The room said</h2>
+  <div class="sop-results"></div>
+  <p class="muted" data-step="1">Make your own at github.com/radioheavy/show-of-phones</p>
+  <aside class="notes">
+0 · Read the room's results.
+1 · Thank you! Phones now show the links.
+  </aside>
+</section>

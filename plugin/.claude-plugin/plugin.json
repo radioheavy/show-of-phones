@@ -1,0 +1,10 @@
+{
+  "name": "show-of-phones",
+  "version": "0.1.0",
+  "description": "Build a talk the room plays: Claude interviews you, writes the deck, deploys it, and sets up your phone remote and live audience polls, swipes and tap races.",
+  "author": { "name": "radioheavy" },
+  "homepage": "https://showofphones.oktaydak.com",
+  "repository": "https://github.com/radioheavy/show-of-phones",
+  "license": "MIT",
+  "keywords": ["presentation", "talk", "audience", "poll", "slides", "remote", "cloudflare"]
+}

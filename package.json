@@ -1,0 +1,21 @@
+{
+  "name": "show-of-phones",
+  "version": "0.1.0",
+  "description": "Turn your talk into a game the room plays: a deck on the big screen, a remote in your pocket, the audience on their phones.",
+  "license": "MIT",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "sop": "node cli/sop.mjs",
+    "dev": "node cli/sop.mjs dev",
+    "deploy": "node cli/sop.mjs deploy",
+    "build": "node cli/sop.mjs build",
+    "check": "node cli/sop.mjs check"
+  },
+  "devDependencies": {
+    "wrangler": "^4.40.0"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}

@@ -1,0 +1,71 @@
+/* Show of Phones · design tokens.
+   Every page (deck, audience phone, remote) is drawn only with these variables. A talk changes them in
+   talk.json ("theme": { … }) or overrides any of them in talk.css, which all three pages load.
+   Presets: house (default), daylight, arcade. See docs/THEMES.md. */
+@import url("fonts/fonts.css");
+
+:root {
+  /* the phone-shaped cell used by vote bars and the lobby crowd (set to none for plain bars) */
+  --sop-phone: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 64'%3E%3Crect x='4' y='3' width='22' height='58' rx='6'/%3E%3C/svg%3E");
+}
+
+/* house · the default: a dark theatre, a tungsten spotlight, cue lights, phone screens in the dark */
+:root, [data-theme="house"] {
+  --sop-bg: #1e1233;            /* the house, lights down */
+  --sop-panel: #2c1c49;         /* seats */
+  --sop-line: #4a3670;
+  --sop-fg: #f3eeff;            /* screen white */
+  --sop-muted: #a99bc9;
+  --sop-accent: #ffc24b;        /* tungsten spot */
+  --sop-accent-2: #7cc8ff;      /* phone glow */
+  --sop-on-accent: #1e1233;
+  --sop-go: #3ddc97;            /* cue light: go */
+  --sop-stop: #ff4d6d;          /* cue light: standby */
+  --sop-c1: #ffc24b; --sop-c2: #7cc8ff; --sop-c3: #ff6f91; --sop-c4: #3ddc97; --sop-c5: #c3a6ff; --sop-c6: #ff9a4d;
+  --sop-font: "Atkinson Hyperlegible Next", system-ui, sans-serif;
+  --sop-display: "Big Shoulders Display", "Arial Narrow", sans-serif;
+  --sop-mono: ui-monospace, "SFMono-Regular", Menlo, monospace;
+  --sop-display-weight: 800;
+  --sop-display-tracking: 0.005em;
+  --sop-display-leading: 0.92;
+  --sop-display-case: none;
+  --sop-radius: 14px;
+  --sop-radius-lg: 28px;
+  --sop-bar-mask: var(--sop-phone);
+  --sop-bar-cell: 30px;
+  --sop-bar-glow: 10px;
+  --sop-glow: 0 0 24px color-mix(in srgb, currentColor 55%, transparent);
+  --sop-spot: radial-gradient(ellipse 60% 55% at 50% 0%, color-mix(in srgb, var(--sop-accent) 16%, transparent), transparent 70%);
+  --sop-ease: cubic-bezier(.2, .8, .2, 1);
+}
+
+/* daylight · bright rooms, classrooms, offices with the blinds open */
+[data-theme="daylight"] {
+  --sop-bg: #f2f3f7; --sop-panel: #ffffff; --sop-line: #d4d7e2;
+  --sop-fg: #15142b; --sop-muted: #5f6380;
+  --sop-accent: #2f4bff; --sop-accent-2: #ff5c39; --sop-on-accent: #ffffff;
+  --sop-go: #0f9e64; --sop-stop: #e2334f;
+  --sop-c1: #2f4bff; --sop-c2: #ff5c39; --sop-c3: #0f9e64; --sop-c4: #a23cf0; --sop-c5: #e0a400; --sop-c6: #0aa5c2;
+  --sop-display: "Atkinson Hyperlegible Next", system-ui, sans-serif;
+  --sop-display-weight: 700; --sop-display-tracking: -0.02em; --sop-display-leading: 1.02;
+  --sop-glow: none;
+  --sop-spot: none;
+  --sop-bar-mask: none;
+  --sop-bar-glow: 0px;
+}
+
+/* arcade · pixel fonts and square blocks (the look of the OKTAY.EXE talk this project grew from) */
+[data-theme="arcade"] {
+  --sop-bg: #0b0b1a; --sop-panel: #141428; --sop-line: #2a2a4a;
+  --sop-fg: #f6f5ff; --sop-muted: #8a88b3;
+  --sop-accent: #19c39a; --sop-accent-2: #ffc928; --sop-on-accent: #0b0b1a;
+  --sop-go: #19c39a; --sop-stop: #ff4f8b;
+  --sop-c1: #19c39a; --sop-c2: #ffc928; --sop-c3: #ff4f8b; --sop-c4: #46e6ff; --sop-c5: #8b6cff; --sop-c6: #3d5afe;
+  --sop-display: "Pixelify Sans", monospace;
+  --sop-mono: "Spline Sans Mono", ui-monospace, monospace;
+  --sop-display-weight: 700; --sop-display-tracking: 0; --sop-display-leading: 1.05;
+  --sop-radius: 6px; --sop-radius-lg: 10px;
+  --sop-bar-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Crect x='2' y='2' width='20' height='20'/%3E%3C/svg%3E");
+  --sop-bar-cell: 24px;
+  --sop-spot: none;
+}

@@ -1,0 +1,17 @@
+/* Styles for this talk only. Use the --sop-* tokens so the talk follows its theme. */
+.battery { position: relative; width: 700px; height: 200px; border: 8px solid var(--sop-fg); border-radius: var(--sop-radius-lg); padding: 18px; }
+.battery::after { content: ""; position: absolute; right: -40px; top: 56px; width: 24px; height: 72px; background: var(--sop-fg); border-radius: 0 12px 12px 0; }
+/* the charge is made of the same phone cells as the vote bars */
+.battery i { display: block; height: 100%;
+  background: linear-gradient(90deg, var(--sop-go) var(--charge, 0%), color-mix(in srgb, var(--sop-fg) 10%, transparent) var(--charge, 0%));
+  -webkit-mask: var(--sop-bar-mask) left center / 40px 100% repeat-x; mask: var(--sop-bar-mask) left center / 40px 100% repeat-x;
+  filter: drop-shadow(0 0 12px color-mix(in srgb, var(--sop-go) 50%, transparent)); transition: --charge .6s var(--sop-ease); }
+@property --charge { syntax: "<percentage>"; inherits: true; initial-value: 0%; }
+.battery b { position: absolute; left: calc(100% + 70px); top: 50%; transform: translateY(-50%); font: var(--sop-display-weight) 90px/1 var(--sop-display); color: var(--sop-go); }
+.slide[data-id="tap"] .sop-tap__n b { font-size: 170px; }
+/* "this room": the live phone count; columns top-aligned so the lines reveal downward from the number */
+.slide[data-id="room"] .split { align-items: start; }
+.slide[data-id="room"] .list { padding-top: 40px; }
+.slide[data-id="room"] .huge { font-variant-numeric: tabular-nums; margin: 0; }
+.slide[data-id="room"] .list li { font-size: 54px; margin: 0 0 28px; }
+.slide[data-id="poll"] .verdict { margin-top: 36px; color: var(--sop-accent); }

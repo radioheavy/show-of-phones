@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="{{LANG}}">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, user-scalable=no">
+<meta name="theme-color" content="#0b0b1a">
+<meta name="robots" content="noindex">
+<title>{{TITLE}}</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22%3E%3Ctext y=%22.9em%22 font-size=%2290%22%3E%F0%9F%93%B1%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="../../_engine/theme.css">
+<link rel="stylesheet" href="../../_engine/play.css">
+{{PHONE_CSS}}
+<script>window.SOP_TALK = {{CONFIG}};</script>
+</head>
+<body class="sop-phone">
+<header class="top">
+  <p class="top__title" id="title"></p>
+  <p class="top__conn"><span class="dot" id="dot"></span></p>
+</header>
+<p class="offline" id="offline"></p>
+
+<section class="screen on" id="s-idle">
+  <div class="ticket">
+    <p class="ticket__in" id="idleTitle"></p>
+    <p class="ticket__show" id="idleShow"></p>
+    <div class="ticket__row">
+      <p><small id="seatLbl"></small><b id="me">–</b></p>
+      <p><small id="idlePl"></small><b data-players>0</b></p>
+    </div>
+    <div class="ticket__tear" aria-hidden="true"></div>
+    <p class="ticket__now"><small id="idleNowLbl"></small><span id="idleNow"></span></p>
+  </div>
+  <p class="soft" id="idleWait"></p>
+</section>
+
+<section class="screen" id="s-poll">
+  <p class="q" id="pollQ"></p>
+  <p class="soft" id="pollHint"></p>
+  <div class="opts" id="pollOpts"></div>
+  <p class="msg" id="pollMsg"></p>
+</section>
+
+<section class="screen" id="s-swipe">
+  <p class="soft" id="swipeHint"></p>
+  <div class="cardzone">
+    <div class="pcard" id="pcard"><span class="lab l" id="labL"></span><p id="swipeQ"></p><span class="lab r" id="labR"></span></div>
+  </div>
+  <div class="sides"><button class="side" data-c="0" id="btnL"></button><button class="side" data-c="1" id="btnR"></button></div>
+  <p class="msg" id="swipeMsg"></p>
+</section>
+
+<section class="screen" id="s-tap">
+  <p class="q" id="tapLabel"></p>
+  <button class="tapzone" id="tapzone" type="button"><span id="tapWord"></span></button>
+  <p class="tapstats"><span><b id="myTaps">0</b> <em id="myTapsLbl"></em></span><span><b id="roomTaps">0</b> <em id="roomTapsLbl"></em></span></p>
+</section>
+
+<section class="screen" id="s-verdict">
+  <p class="soft" id="vLbl"></p>
+  <p class="q" id="vQ"></p>
+  <div class="vbars" id="vBars"></div>
+  <p class="vyou" id="vYou"></p>
+</section>
+
+<section class="screen" id="s-end">
+  <p class="big" id="endTitle"></p>
+  <div class="night" id="night"></div>
+  <ul class="links" id="links"></ul>
+  <p class="soft" id="credit"></p>
+</section>
+
+<script src="../../_engine/i18n.js"></script>
+<script src="../../_engine/play.js"></script>
+</body>
+</html>

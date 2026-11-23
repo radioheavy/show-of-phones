@@ -1,0 +1,25 @@
+<!-- Each <section class="slide"> is one slide. data-step="n" makes an element appear on the n-th click.
+     Live widgets: .sop-join (QR + people count), .sop-poll, .sop-swipe, .sop-tap, .sop-results.
+     <aside class="notes"> is shown only on the phone remote. Full reference: docs/FORMAT.md -->
+
+<section class="slide" data-id="lobby" data-title="Lobby">
+  <p class="kicker">Before we start</p>
+  <h1>My talk</h1>
+  <div class="sop-join"></div>
+  <aside class="notes">Leave this up while people come in. Ask them to scan the code.</aside>
+</section>
+
+<section class="slide" data-id="question" data-title="First question">
+  <h2>Your first question?</h2>
+  <div class="sop-poll" data-step="1" data-close="2" data-q="Your first question?" data-options="Yes|No|Maybe"></div>
+  <aside class="notes">
+0 · Ask the question out loud.
+1 · Voting opens on the phones. Wait 15 seconds.
+2 · Voting closes, the winner lights up. Read it out.
+  </aside>
+</section>
+
+<section class="slide" data-id="end" data-title="Thanks">
+  <h2>Thank you!</h2>
+  <div class="sop-results"></div>
+</section>
