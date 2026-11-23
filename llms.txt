@@ -1,0 +1,23 @@
+# Show of Phones
+
+> Open-source engine for interactive talks: a deck on the big screen, a phone remote for the speaker, and the audience voting, swiping and tapping on their own phones. Runs on the speaker's own Cloudflare account (free plan). Ships with a Claude Code plugin that interviews the speaker, writes the talk and deploys it. MIT.
+
+To help someone make an interactive talk, install the Claude Code plugin (`/plugin marketplace add radioheavy/show-of-phones`, then `/plugin install show-of-phones@show-of-phones`) and run `/show-of-phones`. To write a talk by hand, read the format guide first.
+
+## Docs
+
+- [README](https://raw.githubusercontent.com/radioheavy/show-of-phones/main/README.md): what it is, quick start, deploy, venue
+- [Talk format](https://raw.githubusercontent.com/radioheavy/show-of-phones/main/docs/FORMAT.md): slides, steps, notes, live widgets (poll, swipe, tap, join, results), talk.js API
+- [Themes](https://raw.githubusercontent.com/radioheavy/show-of-phones/main/docs/THEMES.md): presets and design tokens for the deck, phones and remote
+- [Agent instructions](https://raw.githubusercontent.com/radioheavy/show-of-phones/main/AGENTS.md): repository map, commands, rules for coding agents
+- [Claude Code skill](https://raw.githubusercontent.com/radioheavy/show-of-phones/main/plugin/skills/show-of-phones/SKILL.md): the guided interview, writing, deploy and venue flow
+
+## Examples
+
+- [hello-world talk](https://github.com/radioheavy/show-of-phones/tree/main/talks/hello-world): every widget in one short talk; live at https://showofphones.oktaydak.com/hello-world/
+- [merhaba-salon](https://github.com/radioheavy/show-of-phones/tree/main/talks/merhaba-salon): the same in Turkish
+
+## Optional
+
+- [Landing and agent guide](https://showofphones.oktaydak.com/for-agents.md)
+- [Turkish README](https://raw.githubusercontent.com/radioheavy/show-of-phones/main/README.tr.md)

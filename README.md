@@ -79,7 +79,7 @@ No internet? The deck still runs; live parts step aside.
 | `worker/` | Cloudflare Worker + one Durable Object room per talk (votes, taps, pairing, remote commands) |
 | `cli/sop.mjs` | `new`, `dev`, `cloud`, `deploy`, `open`, `remote`, `key`, `check`, `build` |
 | `talks/` | your talks (`_template`; examples `hello-world` and `merhaba-salon`) |
-| `site/` | optional: your own landing page, served at the root (create it, or point `"site"` in `sop.config.local.json` at another folder) |
+| `site/` | optional: your own landing page, served at the root (create it, or point `"site"` in `sop.config.local.json` at another folder). Files listed in `site.json` `"private"` are not served |
 | `plugin/` | the Claude Code plugin and skill |
 
 Live widgets: **poll** (2–6 options), **swipe** (one card, two sides), **tap race**, **join** (QR +
@@ -93,6 +93,12 @@ Show of Phones was born as **OKTAY.EXE**, a 10-minute talk at Claude Game Jam (I
 about making three iPhone games with AI. The room survived an elevator, swiped a 1956 card and fed a
 tiny AI with taps. People asked how to do the same; this is that, cleaned up and open for everyone.
 Original talk: https://jam.oktaydak.com
+
+## For agents
+
+Coding agents: read [AGENTS.md](AGENTS.md) (Claude Code picks it up through `CLAUDE.md`). An index for
+language models is in [llms.txt](llms.txt), and the landing serves one at
+https://showofphones.oktaydak.com/llms.txt plus a guide at https://showofphones.oktaydak.com/for-agents.
 
 ## Contributing
 

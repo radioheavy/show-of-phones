@@ -136,8 +136,10 @@ function build({ quiet = false } = {}) {
   // Lives in ./site, or wherever "site" in sop.config(.local).json points (e.g. a separate private repo).
   const siteDir = path.resolve(ROOT, config().site || 'site');
   if (fs.existsSync(siteDir)) {
-    copyDir(siteDir, DIST, (n) => n === 'site.json');
     const site = readJSON(path.join(siteDir, 'site.json'), null);
+    // Not served: site.json, dotfiles, node_modules, and whatever site.json lists in "private" (e.g. README.md, tools).
+    const hidden = new Set(['site.json', 'node_modules', ...((site && site.private) || [])]);
+    copyDir(siteDir, DIST, (n) => hidden.has(n) || n.startsWith('.'));
     if (site && site.room) {
       const slug = site.room.slug || 'landing';
       if (rooms[slug]) die(`site.json room "${slug}" clashes with a talk folder`);

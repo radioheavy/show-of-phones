@@ -51,9 +51,36 @@ export default {
       inner.headers.set('x-sop-room', JSON.stringify(rooms[room]));
       return stub.fetch(inner);
     }
+    // For agents: a client that asks for markdown (Accept: text/markdown) gets the page's markdown twin
+    // when there is one (/ -> /index.md, /for-agents -> /for-agents.md or /for-agents/index.md).
+    if ((request.method === 'GET' || request.method === 'HEAD') && wantsMarkdown(request) && !/\.[a-z0-9]+$/i.test(url.pathname)) {
+      const base = url.pathname.replace(/\/+$/, '');
+      for (const path of base ? [`${base}.md`, `${base}/index.md`] : ['/index.md']) {
+        const r = await env.ASSETS.fetch(new Request(`${url.origin}${path}`, { method: request.method }));
+        if (r.ok) {
+          const out = new Response(r.body, r);
+          out.headers.set('content-type', 'text/markdown; charset=utf-8');
+          out.headers.set('vary', 'accept');
+          return out;
+        }
+      }
+    }
     return env.ASSETS.fetch(request);
   },
 };
+
+// True when the client prefers markdown to HTML (agents that ask for it explicitly).
+function wantsMarkdown(request) {
+  const accept = (request.headers.get('accept') || '').toLowerCase();
+  if (!accept.includes('text/markdown')) return false;
+  const q = (type) => {
+    const m = accept.split(',').map((x) => x.trim()).find((x) => x.startsWith(type));
+    if (!m) return -1;
+    const qm = m.match(/;\s*q=([0-9.]+)/);
+    return qm ? Number(qm[1]) : 1;
+  };
+  return q('text/markdown') >= q('text/html');
+}
 
 // Clean one interaction definition coming from a deck (or from rooms.json for always-open rooms).
 function cleanLive(l) {

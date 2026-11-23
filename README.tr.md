@@ -92,6 +92,12 @@ anlatan on dakikalık **OKTAY.EXE** sunumu olarak doğdu. Salon bir asansörde h
 1956’dan bir kart kaydırdı, minik bir yapay zekâyı dokunuşlarıyla besledi. İnsanlar “aynısını nasıl
 yaparım?” diye sordu: işte o, temizlendi ve herkese açıldı. Orijinal sunum: https://jam.oktaydak.com
 
+## Ajanlar için
+
+Kod yazan ajanlar [AGENTS.md](AGENTS.md) dosyasını okur (Claude Code onu `CLAUDE.md` üzerinden alır). Dil
+modelleri için dizin [llms.txt](llms.txt) dosyasında; landing'de de https://showofphones.oktaydak.com/llms.txt
+ve https://showofphones.oktaydak.com/for-agents adreslerinde var.
+
 ## Katkı
 
 Yeni parçalar (bilgi yarışması, kelime bulutu, soru-cevap), diller (`engine/i18n.js`) ve temalar çok
